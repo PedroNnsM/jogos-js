@@ -8,8 +8,11 @@
 body {
     height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
     background: #060AB2;
-    background-image:url(img/ceu.svg)
+    background-image:url(https://cdn.pixabay.com/photo/2016/03/27/07/32/clouds-1282314__340.jpg);
+    background-size: cover;
 }
   
 .game {
@@ -23,19 +26,22 @@ body {
   
 .memory-card {
     width: calc(25% - 10px);
-    height: calc(33.333% - 10px);
+    height: calc(33% - 10px);
     margin: 5px;
     position: relative;
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
     box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    outline: none;
+    border: none;
     
 }
   
 .memory-card:active {
     transform: scale(0.97);
     transition: transform .2s;
+    outline: none;
 }
 
 .memory-card.flip {
@@ -58,4 +64,7 @@ body {
 .front-face {
     transform: rotateY(180deg);
 }
-  
+
+.front-face img {
+    height: 300px
+}
